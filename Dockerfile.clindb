@@ -1,0 +1,8 @@
+FROM mysql:5.7
+
+ADD aspree.clinicalData.sql /docker-entrypoint-initdb.d/
+
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=aspree
+ENV MYSQL_USER=aspree
+ENV MYSQL_PASSWORD=admin
